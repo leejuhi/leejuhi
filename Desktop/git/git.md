@@ -49,6 +49,10 @@
     - 별명 확인 시 git tag를 사용하면 어떤 별명 사용하는지 보임
     - git tad -d 별명 ->별명 해제
 
-# branch 정리
+# branch 정리(나무)
 
--
+- git branch 이름: 이름의 브랜치를 만듬
+- git checkout 브랜치 이름: 다른 브랜치로 작업 영역을 옮겨감
+- git branch -d 브랜치 이름: 브랜치 이름 삭제
+- git checkout -b 브랜치 이름: git branch+checkout 브랜치이름 과 같은 기능
+- git merge 브랜치 이름: 현재 브랜치에 브랜치이름에 커밋되어 있는 내용을 합병 시킴
