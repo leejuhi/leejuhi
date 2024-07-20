@@ -28,6 +28,10 @@
 - git log (--pretty=oneline): commit 기록 일지 보기
 - git show (commit id 앞 네자리만 쳐도 됨)
 - **최신 커밋 수정**
+<<<<<<< HEAD
   - git commit: commit 메시지 창이 뜨면서 i를 누르면 수정 esc를 누르고 :wq를 적으면 수정 종료
   - git commit --amend: 최신 커밋 수정
   - 어렵다
+=======
+  -git commit --amend: 최신 커밋 수정
+>>>>>>> f46ed41f237611b39c90a6014cef6694b7e4959d
