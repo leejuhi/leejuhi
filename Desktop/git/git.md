@@ -30,3 +30,4 @@
 - **최신 커밋 수정**
   - git commit: commit 메시지 창이 뜨면서 i를 누르면 수정 esc를 누르고 :wq를 적으면 수정 종료
   - git commit --amend: 최신 커밋 수정
+  - 어렵다
