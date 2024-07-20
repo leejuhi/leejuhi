@@ -5,6 +5,7 @@
 - mkdir 파일이름 (파일 생성)
 - cd 파일이름 (파일 안으로 이동)
 - touch 파일이름 -빈 파일 생성
+- cat 파일이름 - 읽어옴
 
 # 사용자 설정
 
@@ -16,4 +17,7 @@
 - git add 파일이름 or 전체 업뎃시 .->git commit -m “메시지“
 - git status git 상태보기
 - git reset 파일 이름 - staging area에서 삭제
-- git push: local 에서 바뀐 내용을 remote 해줌
+- git push: local 에서 바뀐 내용을 remote 해줌 (local->remote)
+  - 주소 바꾸기 git remote remove origin -> 다시 git remote add origin "url"
+  - 주소 확인하기 git remote -v
+- git pull: remote에서 local로 가져오기
