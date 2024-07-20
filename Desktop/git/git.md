@@ -55,4 +55,4 @@
 - git checkout 브랜치 이름: 다른 브랜치로 작업 영역을 옮겨감
 - git branch -d 브랜치 이름: 브랜치 이름 삭제
 - git checkout -b 브랜치 이름: git branch+checkout 브랜치이름 과 같은 기능
-- git merge 브랜치 이름: 현재 브랜치에 브랜치이름에 커밋되어 있는 내용을 합병 시킴
+- git merge 브랜치 이름: 현재 브랜치에 브랜치이름에 커밋되어 있는 내용을 합병 시킴!!
