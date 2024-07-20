@@ -28,10 +28,27 @@
 - git log (--pretty=oneline): commit 기록 일지 보기
 - git show (commit id 앞 네자리만 쳐도 됨)
 - **최신 커밋 수정**
-<<<<<<< HEAD
   - git commit: commit 메시지 창이 뜨면서 i를 누르면 수정 esc를 누르고 :wq를 적으면 수정 종료
   - git commit --amend: 최신 커밋 수정
   - 어렵다
-=======
-  -git commit --amend: 최신 커밋 수정
->>>>>>> f46ed41f237611b39c90a6014cef6694b7e4959d
+- 단축기 붙이기
+  - git config alias.단축어 '명령어 내용'
+- 커밋끼리 비교하기
+  - git diff log아이디1 log아이디2
+- head :가장 최근에 한 커밋이 원래인데 바꾸는 법
+  - git reset --hard 가고 싶은 커밋아이디 4자리
+    - head가 과거의 커밋을 가르키게 함
+    - 워킹 디렉토리를 과거 커밋으로 설정함
+    - 최근 커밋 복구 x
+  - git reset --mixed xxxx
+    - staging area만 reset
+  - git reset --soft xxxx
+    - repository만 reset
+  - 아이디 말고 head~번호를 써도 됨
+  - git tag 별명 아이디 를 쓰면 별명으로 쓸 수 있음
+    - 별명 확인 시 git tag를 사용하면 어떤 별명 사용하는지 보임
+    - git tad -d 별명 ->별명 해제
+
+# branch 정리
+
+-
