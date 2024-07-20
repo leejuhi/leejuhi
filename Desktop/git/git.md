@@ -25,5 +25,7 @@
 
 # Commit 다루기
 
-- git log (--pretty==oneline): commit 기록 일지 보기
-- git show
+- git log (--pretty=oneline): commit 기록 일지 보기
+- git show (commit id 앞 네자리만 쳐도 됨)
+- **최신 커밋 수정**
+  -git commit --amend: 최신 커밋 수정
