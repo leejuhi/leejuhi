@@ -20,4 +20,10 @@
 - git push: local 에서 바뀐 내용을 remote 해줌 (local->remote)
   - 주소 바꾸기 git remote remove origin -> 다시 git remote add origin "url"
   - 주소 확인하기 git remote -v
-- git pull: remote에서 local로 가져오기
+- git pull: remote에서 local로 가져오기 (현재 로컬 저장소에서 무슨 변화가 있었다면 git stash로 임시 저장)
+- git clone "url": 다른 사람의 프로젝트 가져오기
+
+# Commit 다루기
+
+- git log (--pretty==oneline): commit 기록 일지 보기
+- git show
