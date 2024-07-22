@@ -56,3 +56,13 @@
 - git branch -d 브랜치 이름: 브랜치 이름 삭제
 - git checkout -b 브랜치 이름: git branch+checkout 브랜치이름 과 같은 기능
 - git merge 브랜치 이름: 현재 브랜치에 브랜치이름에 커밋되어 있는 내용을 합병 시킴!!
+
+# git 협업하기
+
+- git fetch: git pull과 다르게 merge하지 않고 가져오기만 함
+- git blame 파일이름: 특정 파일의 커밋을 보여줌
+  - git show 커밋 아이디: 누가 언제 고쳤는지 보여줌
+- git revert: 특정 커밋을 취소하는 기능 1 2 3 중에 revert 2를 하면 2만 사라짐
+  - reset이랑 다름
+    - reset은 그전의 커밋을 가르키는 거고
+    - revert는 최신 커밋 이후로 새로운 커밋을 만듬
