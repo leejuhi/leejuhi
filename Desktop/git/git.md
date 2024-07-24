@@ -66,3 +66,67 @@
   - reset이랑 다름
     - reset은 그전의 커밋을 가르키는 거고
     - revert는 최신 커밋 이후로 새로운 커밋을 만듬
+
+# git 활용하기
+
+- git reset을 했을 때 사라지는 것이 아니라 그대로 남아있음
+  - git reflog를 쓰면 그 전 커밋들이 모두 보임
+- git log --pretty=onelline --all --graph: 그래프로 커밋들의 관계가 보임
+- git rebase --continue :conflict나서 merge못한 커밋을 merge
+- git stash :임시저장 (workgin directory내용이 깃에 보관)
+  - git stash list: 임시 저장된 커밋이 있음
+  - git stash apply: 스택에 있는 내용 적용 (최신으로 나옴 아이디를 적으면 그게 나옴)
+    - 잘못된 브랜치에서 썻을 때도 활용가능
+    - git stash pop: apply와 같지만 한번 쓰면 list에서 사라짐
+  - git stash drop 아이디
+- git cherry-pick 커밋 아이디: 원하는 커밋만 불러올 수 있음 (branch 옮기기)
+
+## git 협업하기
+
+# pull request
+
+- PR (pull request)
+  - 어떤 코드를 클론하고 변경 사항 커밋하고 푸쉬
+    - open, merged, closed가 됨
+  - pr을 처리할 때 merge 방법
+    - merge commit
+    - squash and merge
+      - branch에 있는 여러개의 커밋을 하나의 커밋으로 합치고 merge하는 브랜치에 옮김 (브랜치가 없어짐)
+    - rebase merge
+      - branch에 있는 여러개의 커밋을 merge하는 브랜치에 그대로 옮김 (branch는 사라짐)
+  - fork : repository를 복사해서 내 저장소에서 코드 작성
+
+# 코드 리뷰하기
+
+- 코드 리뷰: #을 쓰면 pull request 검색 가능
+  - suggestion
+    - comment: 개선 사항 제시
+    - approve: 문제 없음
+    - request change: 개선 및 수정 요구
+- linting: 스타일 맞춰주는 도구
+  - eslint와 prettier이 있음
+
+# 브랜치 전략 (git flow)
+
+- feature 전략: 수정 개발 업데이트를 할 때 새로운 브랜치를 생성해서 사용
+  - feature은 develop(main)에서 나와서 develope에 병합됨
+- 브랜치 이름은 직관적 지정: _ex)fix/login feat/login_
+- 수정을 확인해야할 때 release 수정을 할 때 hotfix 브랜치
+- CI(continuous ontegration)
+  - 변경 사항을 공유된 통합과정에 공유
+- CD 자동화를 통해 소프트웨어를 릴리즈
+- github 버저닝
+  - semver:1(주요변경사항-리뉴얼).0(기능 추가및 미세한 변경 사항).0(버그 수정)
+    - 위에 번호가 올라가면 뒤에 초기화
+  - choose tag를 해서 버전을 선택하면 커밋 내역을 가져옴
+
+# 협업 자동화
+
+- code owner 특정 파일 및 디랙토리 책임자 지정
+  - .github/CODEOWNNERS
+    - READ.ME @username 이런식으로 책임자 지정
+    - 리뷰어가 되도록 자동화됨
+- pull request 템플릿 기능
+  - .github/PULL_REQUEST_TEMPLATE.md
+  - 보통 -> pr 요약, 변경 사유, 체크리스트, 추가 사항을
+- github workflow??
